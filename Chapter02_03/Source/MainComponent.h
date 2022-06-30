@@ -1,6 +1,7 @@
 #pragma once
 
 #include <JuceHeader.h>
+#include "NumericalLabel.h"
 
 //==============================================================================
 /*
@@ -9,7 +10,8 @@
 */
 class MainComponent : public juce::Component,
     public juce::Button::Listener,
-    public juce::Slider::Listener
+    public juce::Slider::Listener,
+    public juce::Label::Listener
 {
 public:
     //==============================================================================
@@ -21,13 +23,14 @@ public:
     void resized() override;
     void buttonClicked(juce::Button* button);
     void sliderValueChanged(juce::Slider* slider);
+    void labelTextChanged(juce::Label* label);
     
 private:
     //==============================================================================
     // Your private member variables go here...
     juce::TextButton button1;
     juce::Slider slider1;
-    juce::Label label1;
+    NumericalLabel label1;
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };

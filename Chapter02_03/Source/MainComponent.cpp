@@ -6,9 +6,12 @@ MainComponent::MainComponent() :
     slider1(juce::Slider::LinearHorizontal, juce::Slider::NoTextBox)
 {
     slider1.setRange(0.0, 100.0);
+    label1.setEditable(true);
 
     slider1.addListener(this);
     button1.addListener(this);
+    label1.addListener(this);
+
     slider1.setValue(100.0, juce::sendNotification);
 
     addAndMakeVisible(&button1);
@@ -57,5 +60,15 @@ void MainComponent::sliderValueChanged(juce::Slider* slider)
     if(&slider1 == slider)
     {
         label1.setText(juce::String(slider1.getValue()), juce::sendNotification);
+    }
+}
+
+void MainComponent::labelTextChanged(juce::Label* label)
+{
+    if(&label1 == label)
+    {
+        slider1.setValue(label1.getText().getDoubleValue(), juce::sendNotification);
+
+        label1.setText(juce::String(slider1.getValue()), juce::dontSendNotification);
     }
 }

@@ -4,6 +4,10 @@
               addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1">
   <MAINGROUP id="x5ex5G" name="Chapter02_03">
     <GROUP id="{061B70D5-E8FD-8DE5-1971-6A700530B136}" name="Source">
+      <FILE id="VnNunw" name="NumericalLabel.cpp" compile="1" resource="0"
+            file="Source/NumericalLabel.cpp"/>
+      <FILE id="shTwvZ" name="NumericalLabel.h" compile="0" resource="0"
+            file="Source/NumericalLabel.h"/>
       <FILE id="DxRrpP" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
       <FILE id="zeJRnH" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
       <FILE id="SQgELL" name="MainComponent.cpp" compile="1" resource="0"
